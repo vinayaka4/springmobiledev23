@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchNewActivity(View view){
-        Intent i = new Intent(this,ClickyClickyActivity.class);
-        startActivity(i);
+        Intent intent = new Intent(this,ClickyClickyActivity.class);
+        startActivity(intent);
     }
 
 }
