@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClickyClickyActivity">
+
+    <Button
+        android:id="@+id/butA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:onClick="onPress"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@+id/butB"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/butC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:onClick="onPress"
+        android:text="C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butB"
+        app:layout_constraintTop_toTopOf="@+id/butB" />
+
+    <Button
+        android:id="@+id/butD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onPress"
+        android:text="D"
+        app:layout_constraintBaseline_toBaselineOf="@+id/butE"
+        app:layout_constraintEnd_toStartOf="@+id/butE"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:onClick="onPress"
+        android:text="E"
+        app:layout_constraintEnd_toStartOf="@+id/butF"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butD"
+        app:layout_constraintTop_toBottomOf="@+id/butB" />
+
+    <Button
+        android:id="@+id/butF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onPress"
+        android:text="F"
+        app:layout_constraintBaseline_toBaselineOf="@+id/butE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butE" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:text="PRESSED:"
+        app:layout_constraintStart_toStartOf="@+id/butE"
+        app:layout_constraintTop_toBottomOf="@+id/butE" />
+
+    <Button
+        android:id="@+id/butB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onPress"
+        android:text="B"
+        app:layout_constraintBaseline_toBaselineOf="@+id/butA"
+        app:layout_constraintEnd_toStartOf="@+id/butC"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butA" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="butA,butB,butC,butD,butE,butF,textView4"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
