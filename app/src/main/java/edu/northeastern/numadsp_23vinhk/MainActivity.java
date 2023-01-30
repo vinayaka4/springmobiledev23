@@ -27,4 +27,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public  void  launchLinkCollector(View view){
+        Intent intent = new Intent(this, LaunchLinkCollectorActivity.class);
+        startActivity(intent);
+    }
+
 }

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NUMADSp_23vinhk"
         tools:targetApi="31">
         <activity
+            android:name=".LaunchLinkCollectorActivity"
+            android:exported="false" />
+        <activity
             android:name=".AboutMe"
             android:exported="false" />
         <activity
