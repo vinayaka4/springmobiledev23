@@ -17,26 +17,23 @@ public class ClickyClickyActivity extends AppCompatActivity {
 
     public void onPress(View view) {
         int theid = view.getId();
-        if (theid == R.id.butA)
-        {
-            ((TextView)findViewById(R.id.textView4)).setText("PRESSED:A");
+        if (theid == R.id.butA) {
+            ((TextView) findViewById(R.id.textView4)).setText("PRESSED:A");
         }
-        if (theid == R.id.butB)
-        {
-            ((TextView)findViewById(R.id.textView4)).setText("PRESSED:B");
-        } if (theid == R.id.butC)
-        {
-            ((TextView)findViewById(R.id.textView4)).setText("PRESSED:C");
-        } if (theid == R.id.butD)
-        {
-            ((TextView)findViewById(R.id.textView4)).setText("PRESSED:D");
-        } if (theid == R.id.butE)
-        {
-            ((TextView)findViewById(R.id.textView4)).setText("PRESSED:E");
+        if (theid == R.id.butB) {
+            ((TextView) findViewById(R.id.textView4)).setText("PRESSED:B");
         }
-        if (theid == R.id.butF)
-        {
-            ((TextView)findViewById(R.id.textView4)).setText("PRESSED:F");
+        if (theid == R.id.butC) {
+            ((TextView) findViewById(R.id.textView4)).setText("PRESSED:C");
+        }
+        if (theid == R.id.butD) {
+            ((TextView) findViewById(R.id.textView4)).setText("PRESSED:D");
+        }
+        if (theid == R.id.butE) {
+            ((TextView) findViewById(R.id.textView4)).setText("PRESSED:E");
+        }
+        if (theid == R.id.butF) {
+            ((TextView) findViewById(R.id.textView4)).setText("PRESSED:F");
         }
     }
 

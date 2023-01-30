@@ -15,13 +15,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void HandleOnClick(View view){
-        Toast.makeText(this,"NAME:VINAYAKA H K \n EMAIL:hosahallikotrappa.v@northeastern.edu" ,Toast.LENGTH_LONG).show();
+    public void HandleOnClick(View view) {
+        Intent aboutMe = new Intent(this, AboutMe.class);
+        startActivity(aboutMe);
+        //Toast.makeText(this, "NAME:VINAYAKA H K \n EMAIL:hosahallikotrappa.v@northeastern.edu", Toast.LENGTH_LONG).show();
 
     }
 
-    public void launchNewActivity(View view){
-        Intent intent = new Intent(this,ClickyClickyActivity.class);
+    public void launchNewActivity(View view) {
+        Intent intent = new Intent(this, ClickyClickyActivity.class);
         startActivity(intent);
     }
 
