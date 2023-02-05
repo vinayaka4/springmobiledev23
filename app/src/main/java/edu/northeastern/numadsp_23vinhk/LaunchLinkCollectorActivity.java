@@ -8,9 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -18,13 +20,19 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
 
 public class LaunchLinkCollectorActivity extends AppCompatActivity {
+
     RecyclerView recyclerView;
 
-    EditText editText;
+   private  Linkadapter linkadapter;
     FloatingActionButton floatingActionButton;
+    private static String LIST_STATE= "list_state";
+    private Parcelable savedRecyclerLayoutState;
+    private static final String BUNDLE_RECYCLER_LAYOUT="recycler_layout";
+
     ArrayList<Urlmodel> linkcollector = new ArrayList<>();
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_link_collector);
@@ -45,7 +53,20 @@ public class LaunchLinkCollectorActivity extends AppCompatActivity {
                 EditText siteName = dialog.findViewById(R.id.editNamedi);
                 EditText siteUrl = dialog.findViewById(R.id.editTextUrldi);
                 Button btnAction = dialog.findViewById(R.id.btnurladd);
+                TextView textname = findViewById(R.id.textname);
+                TextView texturl = findViewById(R.id.texturl);
 
+                if (savedInstanceState!=null){
+                    String name= savedInstanceState.getString("namekey");
+                    if (name != null) {
+                       textname.setText(name);
+                    }
+                    String url = savedInstanceState.getString("urlkey");
+                    if(url !=null){
+                        texturl.setText(url);
+
+                    }
+                }
                 btnAction.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -96,13 +117,13 @@ public class LaunchLinkCollectorActivity extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
 
+        for(int i=0; i<linkcollector.size(); i++){
+            outState.putString("namekey", linkcollector.get(i).name);
+            System.out.println(linkcollector.get(i).name);
+            outState.putString("urlkey", linkcollector.get(i).url);
+        }
+
+        super.onSaveInstanceState(outState);
     }
 
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-
-
-
-    }
 }

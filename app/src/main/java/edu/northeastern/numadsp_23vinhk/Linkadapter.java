@@ -26,10 +26,6 @@ import java.util.ArrayList;
 
 public class Linkadapter extends RecyclerView.Adapter<Linkadapter.ViewHolder> {
     Context context;
-    CardView cardView;
-    TextView textView;
-    ConstraintLayout constraintLayout;
-    RecyclerView recyclerView;
     ArrayList<Urlmodel> linkcollector;
 
     Linkadapter(Context context, ArrayList<Urlmodel> linkcollector) {
