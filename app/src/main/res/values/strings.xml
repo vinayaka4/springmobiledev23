@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NUMADSp_23vinhk</string>
+    <string name="number">number</string>
+    <string name="prime">prime</string>
 </resources>

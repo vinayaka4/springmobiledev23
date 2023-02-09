@@ -126,4 +126,5 @@ public class LaunchLinkCollectorActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+
 }

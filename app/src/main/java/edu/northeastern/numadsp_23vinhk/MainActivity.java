@@ -32,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public  void  launchPrimeNumber(View view){
-        Intent intent = new Intent(this, LaunchPrimeNumberActivity.class);
+    public  void  launchPrimeActivity(View view){
+        Intent intent = new Intent(this, Prime_Activity.class);
         startActivity(intent);
     }
+
 
 }
