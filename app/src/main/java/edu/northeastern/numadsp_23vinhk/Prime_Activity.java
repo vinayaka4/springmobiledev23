@@ -16,6 +16,8 @@ public class Prime_Activity extends AppCompatActivity {
     private static final String TAG = "_________in runaable thread";
     private Handler textHandler = new Handler();
 
+
+
    private int i=3, jk, k;
 
     private int count=0;
@@ -56,28 +58,30 @@ public class Prime_Activity extends AppCompatActivity {
     }
 
     public void searchPrime(View view) {
+        i = 3;
+       // System.out.println("jkkkkkkk = "+i);
         isRunning = true;
-        count =1;
         new Thread(new Prime()).start();
+
 
     }
 
     public void onTerminate(View view) {
         isRunning = false;
-
     }
 
     class Prime implements Runnable {
         @Override
         public void run() {
 
-            for (; ; i += 2) {
+            System.out.println("JKKKKKKKK = "+i);
+            for (; ; i++) {
                 jk = i;
-
+                System.out.println("jk = "+jk);
                 if (!isRunning) {
                     return;
                 }
-                Log.d("=====onCreate=====", "status" + isRunning);
+
                 textHandler.post(new Runnable() {
                     @Override
                     public void run() {
@@ -108,6 +112,7 @@ public class Prime_Activity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                i++;
             }
 
         }
@@ -147,5 +152,10 @@ public class Prime_Activity extends AppCompatActivity {
          outState.putInt("prime",k);
         outState.putBoolean("thread",isRunning);
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
