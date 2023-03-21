@@ -37,5 +37,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public  void  launchLocationActivity(View view){
+        Intent intent = new Intent(this, Location_Activity.class);
+        startActivity(intent);
+    }
+
 
 }

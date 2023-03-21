@@ -27,7 +27,7 @@ public class Prime_Activity extends AppCompatActivity {
     String prim = "Latest Prime number Found IS :  ";
     private  TextView txtnum, txtprn;
 
-    private  boolean isRunning = false;
+    private volatile boolean isRunning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,6 +156,7 @@ public class Prime_Activity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+
         super.onDestroy();
     }
 }
